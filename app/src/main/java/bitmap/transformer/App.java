@@ -3,37 +3,16 @@
  */
 package bitmap.transformer;
 
-import java.util.Scanner;
+
 
 public class App {
-    private static final int EXIT = 0;
-    private static int transformerChoice;
-    private static String fileToManipulate;
-    private static String newFileName;
+
     
     public static void main(String[] args) {
-        System.out.println("Enter a Bitmap file to manipulate (must include '.bmp') or 0 to exit: ");
-        Scanner scan = null;
-        fileToManipulate = scan.nextLine();
-        if (fileToManipulate.equals("0")) return;
-        System.out.println("Enter a name for your new file (do not include a file extension): ");
-        newFileName = scan.nextLine();
-        do {
-            System.out.println("Transformation Choice: \n" +
-                    "---------------------------------\n" +
-                    "0 : Exit\n" +
-                    "1 : Purple-ize\n" +
-                    "2 : Flip Horizontal\n" +
-                    "3 : Flip Vertical\n");
-            System.out.println("Enter a transformation type (enter a number only): ");
-            try {
-                transformerChoice = Integer.parseInt(scan.nextLine());
-                break;
-            } catch (Exception e) {
-                System.out.println("You did not enter a number, please try again\n");
-            }
-        } while (true);
-        System.out.println();
+
+            InputsFromUser.inputFromUser();
+
 
     }
+
 }
